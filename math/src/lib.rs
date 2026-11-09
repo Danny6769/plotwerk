@@ -1,0 +1,26 @@
+pub mod ast;
+pub mod calculus;
+pub mod cas;
+pub mod eval;
+pub mod format;
+pub mod numeric;
+pub mod parser;
+pub mod simplify;
+pub mod solve;
+pub mod stats;
+mod logic;
+mod matrices;
+mod systems;
+mod advanced;
+mod inequalities;
+mod stats_cas;
+
+pub use ast::{Constant, Expr, Statement};
+pub use calculus::{derivative, integrate};
+pub use cas::{cas_eval, CasEnv};
+pub use eval::{compile, eval, Compiled, Context, EvalError};
+pub use format::{format_expr, format_number};
+pub use numeric::{find_extrema, find_roots, integrate_numeric, Extremum, ExtremumKind};
+pub use parser::{parse_expr, parse_statement, ParseError};
+pub use simplify::{expand, factor, simplify};
+pub use solve::{solve, Solution};
